@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>M. Azky Fuadi Z A</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            }
+            
+            body {
+            background-color: #eff1f2;
+            font-family: comic-sans;
+            }
+            
+            .content {
+            grid-area: content;
+            width: 95%;
+            }
+            
+            .sidebar {
+            grid-area: sidebar;
+            background: linear-gradient(
+                to right,
+                rgb(57, 54, 55),
+                rgb(116, 108, 118),
+                rgb(179, 181, 200)
+            );
+            justify-content: center;
+            }
+            
+            .footer {
+            grid-area: footer;
+            background: linear-gradient(
+                to bottom,
+                rgb(252, 252, 252)
+            );
+            }
+            
+            .container {
+            font-size: 1.2em;
+            width: 70%;
+            height: 100;
+            height: 100vh;
+            display: grid;
+            grid-template-areas: 'sidebar' 'content' 'footer';
+            grid-template-columns: 1fr;
+            grid-template-rows: 130px 800px 250px;
+            }
+            
+            .content,
+            .sidebar,
+            .footer {
+            padding: 1em;
+            }
+            
+            nav ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            }
+            
+            nav li {
+            list-style: none;
+            padding: 1em 0;
+            }
+            
+            nav li a {
+            color: white;
+            font-weight: 700;
+            opacity: 0.6;
+            text-decoration: none;
+            transition: 0.3s;
+            }
+            
+            nav li a:hover {
+            opacity: 1;
+            }
+            
+            .hero {
+            max-width: 90 px;
+            margin: 0 auto;
+            text-align: center;
+            }
+            
+            .hero img {
+            width: 200px;
+            }
+            
+            .hero h1 {
+            font-size: 2em;
+            font-weight: 300;
+            font-style: italic;
+            color: #373046;
+            }
+            
+            .hero p {
+            font-weight: 300;
+            line-height: 1.3em;
+            color: #98abad;
+            }
+            
+            .action-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            background: linear-gradient(
+                to right,
+                rgb(57, 54, 55),
+                rgb(116, 108, 118),
+                rgb(179, 181, 200)
+            );
+            padding: 0.5em 2em;
+            border-radius: 60px;
+            margin: 1em 0;
+            transition: 0.3s;
+            }
+            
+            footer ul {
+            max-width: 640px;
+            margin: 2em auto;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            }
+            
+            footer ul li {
+            list-style: none;
+            width: 50%;
+            align-self: flex-end;
+            }
+            
+            footer ul li a {
+            text-decoration: none;
+            color: #444547;
+            }
+            
+            footer ul li img {
+            width: 30%;
+            }
+            
+            footer p {
+            font-size: 0.7em;
+            font-weight: 200;
+            }
+            
+            @media (min-width: 1040px) {
+            .container {
+                grid-template-areas: 'sidebar content' 'sidebar footer';
+                grid-template-rows: 1fr auto;
+                grid-template-columns: 300px 1f;
+            }
+            
+            nav ul {
+                display: grid;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+            
+            .sidebar {
+              background: linear-gradient(
+                to right bottom,
+                rgb(57, 54, 55),
+                rgb(116, 108, 118),
+                rgb(179, 181, 200)
+            );
+                padding-top: 4.3em;
+                padding-bottom: 7em;
+                padding-right: 2em;
+                padding-left: 2em;
+            }
+            
+            .hero {
+                text-align: left;
+                margin: 7em 0;
+            }
+            
+            .hero img {
+                width: 125px;
+                float: right;
+                max-width: 200px;
+                border-radius: 30%;
+                margin: 1em auto;
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 3em;
+            }
+            
+            .hero p {
+                width: 80%;
+            }
+            
+            .search-box {
+            margin-top: 20px;
+            text-align: center;
+            }
+            input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            font-size: 16px;
+            }
+            input[type="submit"] 
+            {
+            padding: 10px 20px;
+            background: linear-gradient(
+                to right,
+                rgb(82, 80, 81),
+                rgb(116, 108, 118),
+                rgb(157, 154, 155)
+                );
+              color: white;
+              border: none;
+              cursor: pointer;
+              font-size: 16px;
+              }
+              input[type="submit"]:hover {
+              background: linear-gradient(
+                to right,
+                rgb(157, 154, 155),
+                rgb(116, 108, 118),
+                rgb(157, 154, 155)
+                );
+              }
+              table {
+              width: 100%;
+              border-collapse: collapse;
+              margin-top: 20px;
+              }
+              table, th, td {
+              border: 1px solid #ddd;
+              font-size: 0.95em;
+              }
+              th, td {
+              padding: 12px;
+              text-align: left;
+              }
+              th {
+              background-color: #f2f2f2;
+              }
+            footer ul {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 1em 0;
+            }
+            
+            footer ul li a img {
+                width: 50%;
+            }
+            .result-table h2 {
+              font-size: 1em;
+            }
+            }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#profil">Profile</a></li>
+            <li><a href="#pendidikan">Educational Background</a></li>
+            <li><a href="#pengalaman">Experience and Achievement</a></li>
+            <li><a href="#funfact">Funfact</a></li>
+            <li><a href="#opac">My Library</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <main class="content">
+        <section class="hero">
+          <div class="hero-content">
+            <h1><b>WHO AM I ???</b></h1>
+            <img src="Azky.jpg" alt="" />
+            <br />
+            <h2>Let's get to know me !!</h2>
+            <br /><br />
+            <p> 
+              <p align="justify"> Nama : M. Azky Fuadi Z A  <br> NIM : 23101040033 <br> Kelas : Desain Web - B <br> <a href="#profil">....more information about me</a> </p>
+            </p>
+            <br><a href="jawaban.html" class="action-btn">🗒️ Jawaban</a>
+            <a href="#profil" class="action-btn">Next &searhk;</a>
+          </div>
+        </section>
+        
+        <section id="profil">
+            <h2>Profile</h2> <br>
+            <PRE>
+  Nama                     : M. Azky Fuadi Z A
+  NIM                      : 23101040033
+  Kelas                    : Desain Web - B
+  Tempat dan Tanggal Lahir : Kab. Garut, 10 Januari 2006
+  Jenis Kelamin            : Laki-laki
+  Agama                    : Islam
+  Pekerjaan                : Urban Planner
+
+  <a href="index.html" class="action-btn">🏛️ Home</a>  <a href="#pendidikan" class="action-btn">Next &searhk;</a><br>
+
+            </PRE>
+        </section>
+
+        <section id="pendidikan">
+            <h2>Educational Background</h2> <br>
+            <PRE>
+  Formal:            
+  SD  : MI Al-Khairiyyah II (2011-2017)
+  SMP : SMP IT Al-Khairiyyah (2017-2020)
+  SMA : MAN 1 Garut (2020-2023)
+  S-1 : Ilmu Perpustakaan, UIN Sunan Kalijaga Yogyakarta (2023-now)
+
+  Non-Formal :
+  MD  : MDTA Al-Amin (2011-2016)
+
+  <a href="index.html" class="action-btn">🏛️ Home</a>  <a href="#pengalaman" class="action-btn">Next &searhk;</a><br>
+
+             </PRE>
+        </section>
+
+        <section id="pengalaman">
+            <h2>Experience and Achievement</h2> <br>
+            <PRE>
+  Experience :
+  1. 2019 - Foto Model Visualisasi Seragam SMP IT Al-Khairiyyah
+  2. 2019 - 2020 Sekretaris Umum OSIS SMP IT Al-Khairiyyah
+  3. 2021 - 2022 Wakil Ketua Umum TTQ MAN 1 Garut
+  4. 2024 - Sekretaris Divisi Pengembangan Profesi ALUS Asosiasi Mahasiswa Ilmu Perpustakaan
+
+  Achievement
+  1. 2018 - Peringkat 5 LCC PAI Tingkat Provinsi Jawa Barat
+  2. 2022 - Semifinalis Madrasah Young Researchers (MYRESS) Kategori MA
+
+  <a href="index.html" class="action-btn">Home</a>  <a href="#funfact" class="action-btn">Next &searhk;</a><br>
+
+             </PRE>
+        </section>
+
+        <section id="funfact">
+            <h2>Funfact</h2> <br>
+            <PRE>
+  - Ingin bisa terbang
+  - Reinkarnasi paus orca
+  - Ga suka bawang putih
+  - Fobia katak dan kodok
+  - Gampang trauma kalo habis kecelakaan
+  - Ingin jadi urban planner, tapi kuliahnya jurusan ilmu Perpustakaan
+  - Sulit adaptasi sama orang atau suasana baru
+  - Alergi karet
+  - Kalo lagi bosen suka nonton Curious George sama Hallo Jadoo
+  - Suka warna abu-abu, silver, atau gradasi dari hitam ke putih
+  - Sering dikira Jawa, padahal aslinya Sunda 1000000%
+  - Ga suka pake celana jeans, susah dilepas dan bikin kaki lecet
+  - Hari rabu adalah hari paling sial -- sejak 2019
+  - Anti kritik
+  - Mengidolakan red bird
+  - Tidak ingin tinggal di Garut, kecuali kalo jalanan utamanya udah diperbaiki
+  - Suka nonton The Return of Superman edisi Keluarga Elyseen Park
+  - Takut tsunami
+  - Sering menemukan cicak mati
+  - Suka kehidupan bawah laut
+
+
+  <a href="index.html" class="action-btn">🏛️ Home</a>  <a href="#opac" class="action-btn">Next &searhk;</a><br><br>
+             </PRE>
+        </section>
+
+        <section id="opac">
+          <h1><center> </h1>
+          <p><center><font size="6"><b>Online Public Access Catalog <br> MAFZA Library</b></font></center></p>
+          <div class="search-box">
+              <form action="hasil-pencarian.html" method="GET">
+                  <input type="text" name="search" placeholder="Masukkan judul, penulis, atau kata kunci buku...">
+                  <input type="submit" value="Cari">
+              </form>
+          </div> <br>
+          <div class="result-table"> <br>
+              <h2><center>Pencarian Populer</h2>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>ID Buku</th>
+                          <th>Judul Buku</th>
+                          <th>Penulis</th>
+                          <th>Penerbit</th>
+                          <th>Tempat Terbit</th>
+                          <th>Tahun Terbit</th>
+                          <th>Cetakan</th>
+                          <th>ISBN</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>ML240012</td>
+                          <td>The Jungle Book</td>
+                          <td>Rudyard Kipling</td>
+                          <td>Gramedia Pustaka Utama</td>
+                          <td>Jakarta</td>
+                          <td>2018</td>
+                          <td>Cetakan ke-4</td>
+                          <td>9786020398549</td>
+                      </tr>
+                  </tbody>
+              </table>
+            </center>
+          </div>
+      <a href="index.html" class="action-btn">🏛️ Home</a>
+      </section>
+
+      </main>
+      <div class="footer" id="contact">
+        <footer>
+          <ul>
+            <li>
+              <a href="mailto:23101040033@student.uin-suka.ac.id"><img src="logo email.png" width="20" height="70" /><p>E-mail</p></a>
+            </li>
+            <li>
+              <a href="https://wa.me/6285624675496"><img src="logo whatsapp.png"  width="20" height="70" /><p>WhatsApp</p></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/azky_fz"><img src="logo instagram.png"  width="20" height="65" /><p>Instagram</p></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/azky_fz"><img src="logo facebook.png" width="20" height="65" /><p>Facebook</p></a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com/azky_fz"><img src="logo twitter.png" width="20" height="70" /><p>Twitter</p></a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
